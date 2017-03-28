@@ -1,0 +1,51 @@
+\*pierwszy problem rozwiązany w solwerze http://hgourvest.github.io/glpk.js/  *\
+\*w ponizszym kodzie sprowadzilem dane zadanie do postaci normalnej*\
+Maximize
+obj: + x1 + x2
+
+Subject To
+cap: - x1 + x2 + x3 =1
+cap1: + x1 + x4 = 3
+cap2: + x2 + x5 = 2
+
+Bounds
+0 <= x1 
+0 <= x2 
+0 <= x3 
+0 <= x4 
+0 <= x5
+
+Generals
+x1
+x2
+x3
+x4
+x5
+
+
+End
+
+Reading problem data
+3 rows, 5 columns, 7 non-zeros
+5 integer variables, none of which are binary
+27 lines were read
+Scaling...
+ A: min|aij| = 1  max|aij| = 1  ratio = 1
+Problem data seem to be well scaled
+GLPK Simplex Optimizer, v4.49
+3 rows, 5 columns, 7 non-zeros
+Preprocessing...
+1 row, 2 columns, 2 non-zeros
+Scaling...
+ A: min|aij| = 1  max|aij| = 1  ratio = 1
+Problem data seem to be well scaled
+Constructing initial basis...
+Size of triangular part = 1
+*0: obj = 1  infeas = 0 (0)
+*2: obj = 5  infeas = 0 (0)
+OPTIMAL SOLUTION FOUND
+{"x1":3,"x2":2,"x3":2,"x4":0,"x5":0}
+
+Porównanie tego co nam wyjdzie w sagu:
+Ponieważ niestety nie wiem jak skompilowaćz wykonac oraz w pewnym momencie w sagu ni wiedzialem jak zmodykikowac udostepniony kod, nie moge porownac wynikow.
+W pliku zadanie2.sagews znajdą Panowie kod w sagu.
