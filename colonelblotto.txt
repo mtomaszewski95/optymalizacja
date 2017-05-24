@@ -1,0 +1,41 @@
+
+Analogicznie jak w grze papier kamień nożyce konstrujemy macierz wypłat dla gracza X.
+	 Y gra 2,2,2   1,2,3   1,1,4
+X gra 2,2,2	0 	0 	1
+X gra 1,2,3	0	0	0
+X gra 1,1,4	-1 	0	0
+Postępując analogicznie jak  na cwiczeniach znajdujemy problem dualny do tego preblemu i rozwiązanie odnajdujemy za pomocą solwera:
+Maximize
+obj: + x0
+Subject To
+cap1: + x1 + x2 + x3 = 1
+cap2: - x0  + x1 =>0
+cap3: - x0 - x3 =>0
+
+Bounds
+0 <= x1 <= 1
+0 <= x2 <= 1
+0 <= x3 <= 1
+
+Generals
+x0
+x1
+x2
+x3
+
+
+End
+
+Reading problem data
+3 rows, 4 columns, 7 non-zeros
+4 integer variables, 3 of which are binary
+21 lines were read
+Scaling...
+ A: min|aij| = 1  max|aij| = 1  ratio = 1
+Problem data seem to be well scaled
+GLPK Simplex Optimizer, v4.49
+3 rows, 4 columns, 7 non-zeros
+Preprocessing...
+0: obj = 0  infeas = 0.0
+OPTIMAL SOLUTION FOUND BY LP PREPROCESSOR
+{"x0":0,"x1":1,"x2":0,"x3":0}
