@@ -1,0 +1,20 @@
+Zakładam że nasz graf jest dwudzielny. Dzieli się więc on na dwa zbiory. Weźmy ten, który ma więcej wierzchołków.
+Otóż my chcemy wziąć jak największą liczbę wierzchołków. Niech i-ty wierzchołek będzie określony przez
+x_{i} i niech będzie ona zmienną binarną - 1 kiedy bierzemy dany wierzchołek, 0 wpp. Czyli maksymalizujemy sume x_{i}.
+Rozważmy teraz ograniczenia. Mamy, że zmienne są całkowitoliczbowe, binarne . Ale także rozważmy sobie sumę a_{i}*x_{i},
+gdzie a_{i} jest liczbą krawędzi wychodzący z i-tego wierzchołka. Naszym ograniczeniem jest by suma a_{i}*x_{i} <= n, gdzie n
+oznacza liczbę wierzchołków w tym drugim zbiorze wierzchołków tego grafu.
+Czyli:
+maximize 
+sum x_{i}
+subject to :
+sum a_{i}*x_{i} <= n
+bounds
+0<=x_{i}<=1 dla każdego i
+generals
+x_{i}, gdzie i=1,....,n
+i w solwerze zaznaczamy opcję całkowitoliczbowego rozwiązania.
+Problem dualny dostajemy, transponując ma macierz A, biorąc do funkcji celu przy współczynniku n oraz biorac z poprzedniej funkcji celu
+współczynniki do ograniczeń.
+W problemie pokryć wierzchołkowych jest to problem znalezienia wierzchołkow z których wychodzi jak najmniej krawędzi 
+(lecz co najmniej jedna).
