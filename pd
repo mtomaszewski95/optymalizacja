@@ -15,6 +15,7 @@ generals
 x_{i}, gdzie i=1,....,n
 i w solwerze zaznaczamy opcję całkowitoliczbowego rozwiązania.
 Problem dualny dostajemy, transponując ma macierz A, biorąc do funkcji celu przy współczynniku n oraz biorac z poprzedniej funkcji celu
-współczynniki do ograniczeń.
+współczynniki do ograniczeń. Jak się dobrze napisze zadanie całkowitoliczbowe, to dostaniemy macierz unimodularną, i z tw. z wykładu
+wiemy że wystarczy rozwiązać wtedy zrelaksowany problem i rozwiązanie będzie takie same
 W problemie pokryć wierzchołkowych jest to problem znalezienia wierzchołkow z których wychodzi jak najmniej krawędzi 
 (lecz co najmniej jedna).
