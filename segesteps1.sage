@@ -118,7 +118,7 @@ def steepness_values(self):
 
 ##################################
 10.
-# Zmiennej, ktory prowadzi do wierzcholka w kierunku najblizszym wektorowi c (gradientowi funkcji celu)
+# Zmienna, ktora prowadzi do wierzcholka w kierunku najblizszym wektorowi c (gradientowi funkcji celu)
 
 def steepest_edge_entering(self):
     values = steepness_values(self)
@@ -128,7 +128,7 @@ def steepest_edge_leaving(self):
     values = steepness_values(self)
 return max(values.iteritems(), key=operator.itemgetter(1))[0][1]
 11.
-#Zmienna, ktory prowadzi do wierzcholka w kierunku najdalszym wektorowi c (gradientowi funkcji celu)
+#Zmienna, ktora prowadzi do wierzcholka w kierunku najdalszym wektorowi c (gradientowi funkcji celu)
 
 def flattest_edge_entering(self):
     values = steepness_values(self)
